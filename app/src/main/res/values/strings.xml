@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Easter Hunt</string>
+    <string name="permissions_explained">The app requires this permission to track you in relation to the egg, It is not offboarded or stored, you gucci!</string>
 </resources>
