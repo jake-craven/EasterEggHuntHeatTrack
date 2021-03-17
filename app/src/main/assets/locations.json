@@ -1,0 +1,95 @@
+{
+  "locations": [{
+    "name": "Eimears",
+    "latitude":  52.659038,
+    "longitude": -8.626797,
+    "hints": [
+      {
+        "hint": "Best parking in limerick",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "Focus on your target",
+        "unlockDistance": 5
+      }
+    ]},{
+    "name": "Costellos",
+    "latitude":  52.660326,
+    "longitude": -8.626480,
+    "hints": [
+      {
+        "hint": "Alcohol olympics",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "Dont hang your hopes on the second hint",
+        "unlockDistance": 10
+      }
+    ]},{
+    "name": "House",
+    "latitude": 52.663032,
+    "longitude":  -8.630960,
+    "hints": [
+      {
+        "hint": "Morning recovery but not at home",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "Dig for pythagoras in this bed",
+        "unlockDistance":5
+      }
+    ]},{
+    "name": "Niamhs",
+    "latitude": 52.663793,
+    "longitude":   -8.653556,
+    "hints": [
+      {
+        "hint": "Travel to phandalin",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "NO TRESPASSING ( legit ) but travel deep into sunville",
+        "unlockDistance":200
+      },
+      {
+        "hint": "Your old friend kept you safe look under her brother",
+        "unlockDistance":10
+      }
+    ]},{
+    "name": "Tennis Court",
+    "latitude": 52.667006,
+    "longitude":  -8.643653,
+    "hints": [
+      {
+        "hint": "Nadal my hints are this obvious",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "Go here to make love",
+        "unlockDistance":1000
+      },
+      {
+        "hint": "This hint requires you to look deep behind the right sign",
+        "unlockDistance":20
+      }
+    ]},{
+    "name": "Cinema",
+    "latitude": 52.668233,
+    "longitude": -8.660102,
+    "hints": [
+      {
+        "hint": "This hint is corny but pop over for the view",
+        "unlockDistance": 100000
+      },
+      {
+        "hint": "The cinema is closed for now, so check amongst the green in the corner of your eye",
+        "unlockDistance":200
+      },
+      {
+        "hint": "N further hint......just look :P",
+        "unlockDistance":100
+      }
+    ]}
+  ]
+}
+

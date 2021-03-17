@@ -2,26 +2,36 @@ package com.example.easterhunt;
 
 import android.location.Location;
 import android.location.LocationListener;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MyCurrentLoctionListener implements LocationListener {
 
     public String myLocation;
     private TextView mTextView;
-    private HuntHint testHint = new HuntHint("Bus Station", 52.659007, -8.624353);
+    private EndpointGuide endpoint;
 
     MyCurrentLoctionListener(TextView tv) {
         this.mTextView = tv;
         this.mTextView.setText("This far");
     }
+    MyCurrentLoctionListener(TextView tv, EndpointGuide endpoint) {
+        this.mTextView = tv;
+        this.mTextView.setText("This far");
+        this.endpoint = endpoint;
+    }
+
+    public void setEndpoint(EndpointGuide endpoint) {
+        this.endpoint = endpoint;
+    }
 
     @Override
     public void onLocationChanged(Location location) {
-        testHint.calculateDistMetres(location.getLatitude(), location.getLongitude());
-        updateTextBox();
+        endpoint.calculateDistMetres(location.getLatitude(), location.getLongitude());
+        updateTextBox(location);
     }
 
-    private void updateTextBox(){
-        this.mTextView.setText(this.testHint.getHint()+"\nCurrent distance to target: "+this.testHint.currentDistanceLandmark+"\nExact Distance: "+this.testHint.distance);
+    private void updateTextBox(Location location){
+        this.mTextView.setText("Current distance to target aporximately: "+this.endpoint.currentDistanceLandmark+" metres\nExact Distance: "+this.endpoint.distance+"\nLongitude: "+ location.getLongitude()+"      Latitude: "+location.getLatitude());
     }
 }
