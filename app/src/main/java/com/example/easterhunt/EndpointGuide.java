@@ -19,8 +19,8 @@ public class EndpointGuide  {
     int distance = 0;
     private LinearLayout Buttons;
     private LinearLayout radar;
-    private int heatMapUpdater = 5;
-    private int heatMapDist = 5;
+    private int heatMapUpdater = 2;
+    private int heatMapDist = -1;
 
     public EndpointGuide(double latitude, double longitude, HuntHint[] hints, LinearLayout Buttons, LinearLayout radar){
         this.Buttons = Buttons;
@@ -37,7 +37,7 @@ public class EndpointGuide  {
         for(int index = 0; index < hints.length ; ++index) {
             Buttons.addView(hints[index]);
         }
-        hints[0].callOnClick();
+        hints[0].unlock();
     }
 
     public void calculateDistMetres(double curLatitude, double curLongitude){
@@ -57,12 +57,11 @@ public class EndpointGuide  {
     }
 
     private void calculateLandmark(float dist){
-        int distanceModifier = kilometre;
-        while(dist < distanceModifier){
-            distanceModifier = distanceModifier/10;
+        int distanceModifier = 10;
+        if(dist < 200){
+            this.currentDistanceLandmark = distanceModifier;
+            this.currentDistanceLandmark += (((int) dist) / distanceModifier) * distanceModifier ;
         }
-        this.currentDistanceLandmark = distanceModifier;
-        this.currentDistanceLandmark += (((int) dist) / distanceModifier) * distanceModifier ;
     }
 
     private void updateHints(int distance){
@@ -72,6 +71,10 @@ public class EndpointGuide  {
     }
 
     private void heatMap(int newDistance){
+        if(heatMapDist == -1){
+            heatMapDist = newDistance;
+            return;
+        }
         if(heatMapDist - heatMapUpdater > newDistance  ) {
             setHotter();
         } else if(heatMapDist+heatMapUpdater < newDistance){
@@ -83,10 +86,10 @@ public class EndpointGuide  {
     }
 
     private void setColder() {
-        radar.setBackgroundColor(Color.parseColor("#000064"));
+        radar.setBackgroundColor(Color.parseColor("#960000"));
     }
 
     private void setHotter() {
-        radar.setBackgroundColor(Color.parseColor("#960000"));
+        radar.setBackgroundColor(Color.parseColor("#00FF00"));
     }
 }

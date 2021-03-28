@@ -81,9 +81,12 @@ public class HuntHint extends androidx.appcompat.widget.AppCompatButton {
     }
 
     public void click() {
-        Log.d(TAG, "setOnClickListener: Click Listener");
+        Log.d(TAG, "onClick: Click Listener");
         if(isUnlocked()){
             HintTextBox.setText(hint);
+            if(unlockDistanceRange < 50000){
+                HintTextBox.setText(HintTextBox.getText().toString()+"\n(Unlocked for being <"+unlockDistanceRange+" metres)");
+            }
         } else {
             HintTextBox.setText("Hint locked get within "+unlockDistanceRange+" metres to view");
         }
@@ -95,5 +98,11 @@ public class HuntHint extends androidx.appcompat.widget.AppCompatButton {
 
     private void setUnlockedText(){
         this.setText("\n  HINT "+index+"  \n");
+    }
+
+    public void unlock(){
+        unlocked = true;
+        setButtonText();
+        click();
     }
 }

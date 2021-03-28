@@ -1,0 +1,178 @@
+{
+  "locations": [
+    {
+      "name": "White house",
+      "latitude": 52.67465328,
+      "longitude": -8.57111137,
+      "hints": [
+        {
+          "hint": "Joe Bidens Limerick Gaff",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Behind the biggest nearby tree",
+          "unlockDistance": 150
+        }
+      ]
+    },
+    {
+      "name": "Sports Bar",
+      "latitude": 52.67325404,
+      "longitude": -8.56451119,
+      "hints": [
+        {
+          "hint": "Where exercise meets alcohol",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "You're on your own on the deck",
+          "unlockDistance": 150
+        }
+      ]
+    },
+    {
+      "name": "Fountain bollocks",
+      "latitude": 52.67510129,
+      "longitude": -8.5746633,
+      "hints": [
+        {
+          "hint": "Spinning water structure",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Behind the biggest nearby tree",
+          "unlockDistance": 150
+        }
+      ]
+    },
+    {
+      "name": "Stables",
+      "latitude": 52.67293222,
+      "longitude": -8.57097788,
+      "hints": [
+        {
+          "hint": "Look between a drunk horses home and field",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "You're trash",
+          "unlockDistance": 100
+        }
+      ]
+    },
+    {
+      "name": "Pavillion",
+      "latitude": 52.67903586,
+      "longitude": -8.56954212,
+      "hints": [
+        {
+          "hint": "Definition: 1 : a very large tent. 2 : a building usually with open sides that is used as a place for entertainment or shelter in a park or garden",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Look to the right of the lone, single green door shrouded in shade",
+          "unlockDistance": 200
+        }
+      ]
+    },
+    {
+      "name": "Fibonaccis end",
+      "latitude": 52.67357062,
+      "longitude": -8.5759333,
+      "hints": [
+        {
+          "hint": "Fibonaccis spiral paves the way",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Travel the sequence, once you reach the end walk to 1pm",
+          "unlockDistance": 100
+        }
+      ]
+    },
+    {
+      "name": "Spar",
+      "latitude": 52.67310096,
+      "longitude": -8.56929232,
+      "hints": [
+        {
+          "hint": "You don't need a scholar to figure this one out",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Dont shop under the tree, look behind it",
+          "unlockDistance": 150
+        }
+      ]
+    },
+    {
+      "name": "Boat house",
+      "latitude": 52.67538742,
+      "longitude": -8.5834639,
+      "hints": [
+        {
+          "hint": "Where ULs boats sleep",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Not getting through the suez canal lately",
+          "unlockDistance": 200
+        },
+        {
+          "hint": "Something old, something new, something borrowed, something .......",
+          "unlockDistance": 100
+        }
+      ]
+    },
+    {
+      "name": "Stables",
+      "latitude": 52.67293222,
+      "longitude": -8.57097788,
+      "hints": [
+        {
+          "hint": "Look between a drunk horses home and field",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "You're trash",
+          "unlockDistance": 100
+        }
+      ]
+    },
+    {
+      "name": "Thomond Bridge",
+      "latitude": 52.67719112,
+      "longitude": -8.57982329,
+      "hints": [
+        {
+          "hint": "I guess a this one has a dead troll",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Look Limerick side",
+          "unlockDistance": 300
+        },
+        {
+          "hint": "Bridge of rugby",
+          "unlockDistance": 150
+        }
+      ]
+    },
+    {
+      "name": "Ambulance",
+      "latitude": 52.67811976,
+      "longitude": -8.567884788,
+      "hints": [
+        {
+          "hint": "Near where doctors grow, and music made",
+          "unlockDistance": 100000
+        },
+        {
+          "hint": "Under the vehicle of remote medication",
+          "unlockDistance": 200
+        }
+      ]
+    }
+  ]
+}
+

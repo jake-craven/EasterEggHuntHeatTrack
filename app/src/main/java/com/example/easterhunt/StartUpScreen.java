@@ -11,6 +11,7 @@ import android.graphics.Color;
 import android.graphics.drawable.GradientDrawable;
 import android.location.LocationManager;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -33,6 +34,7 @@ import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public class StartUpScreen extends AppCompatActivity {
 
+    private static final String TAG = "StartUp";
     LinearLayout layout;
     Button buttons[];
     private final int locationRequestCode = 102;
@@ -74,14 +76,19 @@ public class StartUpScreen extends AppCompatActivity {
             permissionDependencies();
         }
     }
-
+//
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        readJSONMakeButtons();
+//    }
 
     private void ButtonSetup(Button button, int index){
         FrameLayout.LayoutParams lp = new FrameLayout.LayoutParams(MATCH_PARENT,
                 WRAP_CONTENT);
         lp.setMargins(10,10,10,10);
         button.setLayoutParams(lp);
-        button.setText("Show Location "+index);
+        button.setText("Show Location "+(index+1));
         button.setVisibility(VISIBLE);
         button.setBackgroundColor(Color.DKGRAY);
         GradientDrawable shape =  new GradientDrawable();
@@ -110,7 +117,7 @@ public class StartUpScreen extends AppCompatActivity {
     private void readJSONMakeButtons() {
         JSONObject json;
         try {
-            InputStream is = this.getApplicationContext().getAssets().open("locations.json");
+            InputStream is = this.getApplicationContext().getAssets().open("UL.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
@@ -119,6 +126,7 @@ public class StartUpScreen extends AppCompatActivity {
             JSONArray locations = json.getJSONArray("locations");
             buttons = new Button[locations.length()];
             for(int index = 0; index <buttons.length ; ++index){
+                Log.d(TAG, "readJSONMakeButtons: Making buton num "+index);
                 buttons[index] = new Button(this.getApplicationContext());
                 ButtonSetup(buttons[index], index);
             }

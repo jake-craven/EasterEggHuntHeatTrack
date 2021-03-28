@@ -13,11 +13,11 @@ public class MyCurrentLoctionListener implements LocationListener {
 
     MyCurrentLoctionListener(TextView tv) {
         this.mTextView = tv;
-        this.mTextView.setText("This far");
+//        this.mTextView.setText("This far");
     }
     MyCurrentLoctionListener(TextView tv, EndpointGuide endpoint) {
         this.mTextView = tv;
-        this.mTextView.setText("This far");
+//        this.mTextView.setText("This far");
         this.endpoint = endpoint;
     }
 
@@ -32,6 +32,6 @@ public class MyCurrentLoctionListener implements LocationListener {
     }
 
     private void updateTextBox(Location location){
-        this.mTextView.setText("Current distance to target aporximately: "+this.endpoint.currentDistanceLandmark+" metres\nExact Distance: "+this.endpoint.distance+"\nLongitude: "+ location.getLongitude()+"      Latitude: "+location.getLatitude());
+//        this.mTextView.setText("Current distance to target aporximately: "+this.endpoint.currentDistanceLandmark+" metres\nExact Distance: "+this.endpoint.distance+"\nLongitude: "+ location.getLongitude()+"      Latitude: "+location.getLatitude());
     }
 }

@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
         initialiseUI();
         try {
             EndpointGuide endpoint = readEndpoint(locationIndex);
+            distanceText.setText("Location "+(locationIndex+1));
             CurLoc = new MyCurrentLoctionListener(distanceText);
             CurLoc.setEndpoint(endpoint);
             locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
@@ -141,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
     private JSONObject loadJSONFromAsset() {
         JSONObject json;
         try {
-            InputStream is = this.getApplicationContext().getAssets().open("locations.json");
+            InputStream is = this.getApplicationContext().getAssets().open("UL.json");
             int size = is.available();
             byte[] buffer = new byte[size];
             is.read(buffer);
